@@ -1,38 +1,287 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #100c08;
+  font-size: 13px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1280px;
+  height: 100%;
+  width: 100%;
+  padding: 0 160px;
+  margin: 0 auto;
+}
+
+.main {
+  padding: 30px 0;
+  height: 100vh;
+}
+
+.main__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main__top {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__bottom {
+  flex-grow: 1;
+}
+
+.main__news-currency {
+  flex-shrink: 0;
+}
+
+.main__news {
+  margin-bottom: 15px;
+}
+
+.main__currency {
+  display: flex;
+}
+
+.main__card-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.main__currency-item {
+  margin-right: 10px;
+}
+
+.main__currency-item:last-child {
+  margin-right: 0;
+}
+
+.main__subtitle {
+  margin-right: 8px;
+  font-weight: 400;
+}
+
+.main__link {
+  position: relative;
+  display: block;
+  display: flex;
+  align-items: center;
+  color: #100c08;
+}
+
+.main__link-icon {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 0;
+  left: -22px;
+}
+
+.main__news-item {
+  margin-bottom: 7px;
+}
+
+.main__news-item:last-child {
+  margin-bottom: 0;
+}
+
+.main__title {
+  font-size: 18px;
+  color: #0D59B5;
+
+  a {
+    color: inherit;
+  }
+}
+
+.main__text {
+  color: gray;
+}
+
+.main__tabs {
+  margin-right: 15px;
+  display: flex;
+}
+
+.main__tabs-wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.main__tab {
+  margin-right: 15px;
+}
+
+.main__tab:last-child {
+  margin-right: 0;
+}
+
+.main__title-link.main__title-link--unactive {
+  color: #9FC2E9;
+}
+
+.main__card-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 7px;
+}
+
+.main__card-title {
+  margin-bottom: 7px;
+}
+
+.search {
+  margin-bottom: 30px;
+}
+
+.search__form-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search__img-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -140px;
+}
+
+.search__img {
+  max-width: 120px;
+}
+
+.search__form {
+  padding-top: 5px;
+  margin-bottom: 7px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search__input {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border: #FFD85D 3px solid;
+  border-right: none;
+  outline: none;
+}
+
+.search__btn {
+  padding: 10px;
+  border-radius: 0;
+  background-color: #FFD85D;
+  border: #FFD85D 3px solid;
+  cursor: pointer;
+}
+
+.search__example {
+  display: block;
+}
+
+.search__ad {
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: lightgray;
   color: white;
+  font-weight: 600;
+  border: 1px #100c08 solid;
 }
 
-.App-link {
-  color: #61dafb;
+.search__nav {
+  margin-bottom: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search__nav-list {
+  display: flex;
+}
+
+.search__nav-item {
+  margin-right: 20px;
+}
+
+.search__nav-item:last-child {
+  margin-right: 10;
+}
+
+.search__link {
+  color: #1c6ac9;
+  font-size: 17px;
+}
+
+.bottom__list {
+  height: 100%;
+  column-count: 3;
+  gap: 30px;
+}
+
+.bottom__item {
+  break-inside: avoid-column;
+  margin-bottom: 30px;
+}
+
+.bottom__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom__card-title {
+  margin-bottom: 7px;
+}
+
+.bottom__weather-body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.bottom__card-item {
+  margin-bottom: 8px;
+}
+
+.bottom__card-item:last-child {
+  margin-bottom: 0;
+}
+
+.bottom__weather-icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 5px;
+}
+
+.bottom__weather-degrees {
+  display: block;
+  margin-right: 10px;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.bottom__weather-time {
+  display: block;
+  max-width: 80px;
 }
